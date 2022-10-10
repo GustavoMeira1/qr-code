@@ -27,7 +27,7 @@
             <div class="cell"></div>
         </div>
 
-        <v-row justify="center">
+        <v-row justify="center" class="score">
             <v-card  class="totalcard">
                 <span> X</span>
                 <p>{{xWins}}</p>  
@@ -237,37 +237,20 @@ export default {
 .table.x .cell:not(.x):not(.circle):hover::before,
 .table.circle .cell:not(.x):not(.circle):hover::after,
 .table.circle .cell:not(.x):not(.circle):hover::before{
-    background: rgba(0, 0, 0, .4) !important;
+    background: rgba(255, 255, 255, .4) !important;
 }
 
 
 .cell{
     width: 100px;
     height: 100px;
-    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(255, 136, 0);
+    border-bottom: 5px solid rgb(196, 104, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.cell:nth-child(1),
-.cell:nth-child(2),
-.cell:nth-child(3){
-    border-top: none;
-}
-.cell:nth-child(3),
-.cell:nth-child(6),
-.cell:nth-child(9){
-    border-right: none;
-}
-.cell:nth-child(1),
-.cell:nth-child(4),
-.cell:nth-child(7){
-    border-left: none;
-}
-.cell:nth-child(7),
-.cell:nth-child(8),
-.cell:nth-child(9){
-    border-bottom: none;
+    border-radius: 20px;
+    margin: 3px;
 }
 
 .cell.x::before,
@@ -277,7 +260,7 @@ export default {
     content: "";
     height: calc(100px * .15);
     width: calc(100px * .9);
-    background: rgb(0, 0, 0);
+    background: white;
     position: absolute;
     border-radius: 50%;
 }
@@ -297,7 +280,7 @@ export default {
     content: "";
     height: calc(100px * .8);
     width: calc(100px * .8);
-    background: rgb(0, 0, 0);
+    background: white;
     position: absolute;
     border-radius: 50%;
 }
@@ -384,5 +367,8 @@ export default {
 }
 .topPage{
     padding-top: 90px;
+}
+.score{
+    margin-bottom: 90px;
 }
 </style>
