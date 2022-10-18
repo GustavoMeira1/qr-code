@@ -1,4 +1,4 @@
-# jogo-da-velha
+# qr-code
 
 ## Project setup
 ```
