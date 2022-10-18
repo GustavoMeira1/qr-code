@@ -1,19 +1,19 @@
 <template>
   <v-app>
     <v-main>
-      <Velha/>
+      <qrCode/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Velha from './components/JogoDaVelha.vue'
+import qrCode from './components/qr-code.vue'
 
 export default {
   name: 'App',
 
   components: {
-    Velha
+    qrCode
   },
 
   data: () => ({
@@ -32,7 +32,7 @@ export default {
 #app{
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(90deg, rgb(202, 189, 1), rgb(255, 166, 0));
+  background: hsl(212, 45%, 89%);
 }
 ::-webkit-scrollbar{
   display: none;
